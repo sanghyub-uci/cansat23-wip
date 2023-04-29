@@ -1,0 +1,10 @@
+22:22:00 **** Incremental Build of configuration Debug for project payload_test22-23 ****
+make -j16 all 
+arm-none-eabi-size   payload_test22-23.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40736	    484	   1972	  43192	   a8b8	payload_test22-23.elf
+Finished building: default.size.stdout
+ 
+
+22:22:01 Build Finished. 0 errors, 0 warnings. (took 233ms)
+

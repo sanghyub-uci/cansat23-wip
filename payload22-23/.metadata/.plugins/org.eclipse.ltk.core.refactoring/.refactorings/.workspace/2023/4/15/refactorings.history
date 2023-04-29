@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;cansat_payload22-23/Core/Inc/bme280&apos;" deleteContents="false" description="Delete resource &apos;cansat_payload22-23/Core/Inc/bme280&apos;" element1="/cansat_payload22-23/Core/Inc/bme280" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1681287763863"/>
+</session>

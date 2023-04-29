@@ -1,0 +1,56 @@
+/*
+ * mission_data.h
+ *
+ *  Created on: Jan 20, 2022
+ *      Author: Sang
+ */
+
+#ifndef INC_MISSION_DATA_H_
+#define INC_MISSION_DATA_H_
+
+#include "main.h"
+
+typedef struct MissionData
+{
+	uint8_t hours, minutes, seconds; 					//receive_cmd_telemetry()
+	uint8_t * time;										//
+	uint8_t gps_h[3], gps_m[3], gps_s[3];				//store_GPS_data()
+	char * gps_time;									//store_GPS_data()
+
+	uint8_t telemetry_on; 								//receive_cmd_telemetry(),
+	uint8_t sp_released; 	 			//sp1_release(), sp2_release() -I
+	uint8_t sp_tele; 						//receive_cmd_telemetry()
+
+	uint8_t sim_enabled, sim_active; 					//receive_cmd_telemetry()
+	long sim_data; 									//receive_cmd_telemetry()
+	uint8_t flight_or_sim; 								//receive_cmd_telemetry() -I
+	uint16_t packet_num_C;								//create_telemetry()
+	uint16_t packet_num_SP;							//
+
+	float altitude; 									//readSensors()
+	char * gps_altitude;								//store_GPS_data()
+	float temperature;									//readSensors()
+	float voltage;										//readVoltage()
+	char * gps_lat;										//store_GPS_data()
+	char * gps_long;									//store_GPS_data()
+	char * gps_sats;									//store_GPS_data()
+	char * gps_lat_dir;									//store_GPS_data()
+	char * gps_long_dir;								//store_GPS_data()
+	char gps_lat_str[20];
+	char gps_lon_str[20];
+	uint8_t apogee;										//
+	char state[33];									//
+	uint8_t launched;
+	double dec_long;
+	double dec_lat;
+	double number_long;
+	double number_lat;
+	float vector_x;
+	float vector_y;
+//	uint8_t * last_cmd[15];								//receive_cmd_telemetry()
+//	char * altitude_string[6];
+//	char * temperature_string[5];
+//	char * voltage_string[5];
+} MissionData_t;
+
+#endif /* INC_MISSION_DATA_H_ */
